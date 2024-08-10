@@ -1,9 +1,6 @@
 def calcular_imc(peso, altura_cm):
-    """
-    Calcula o IMC dado o peso (em kg) e a altura (em centímetros).
-    Retorna o valor do IMC e a categoria correspondente.
-    """
-    altura_m = altura_cm / 100  # Convertendo a altura de centímetros para metros
+    
+    altura_m = altura_cm / 100
     imc = peso / (altura_m ** 2)
     
     if imc < 18.5:
@@ -23,8 +20,8 @@ def calcular_imc(peso, altura_cm):
 
 def main():
     try:
-        peso = float(input("Digite o seu peso (em kg): "))
-        altura_cm = float(input("Digite a sua altura (em centímetros): "))
+        peso = float(input("Digite o seu peso: "))
+        altura_cm = float(input("Digite a sua altura : "))
         imc, categoria = calcular_imc(peso, altura_cm)
         
         print(f"\nSeu IMC é: {imc:.2f}")
